@@ -2,7 +2,7 @@ import { CharacterType } from './index.js';
 
 export interface WordData {
   english: string;
-  translation: string;
+  french: string;
   phonemes: string[];
   translationPhonemes: string[];
   examples: string[];

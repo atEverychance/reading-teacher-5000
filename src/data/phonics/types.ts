@@ -1,17 +1,29 @@
-import { PHONEME_TYPES, VOWEL_SOUNDS } from './constants.js';
+import config from './phonemeConfig.js';
 
-export type PhonemeType = typeof PHONEME_TYPES[keyof typeof PHONEME_TYPES];
-export type VowelSound = typeof VOWEL_SOUNDS[keyof typeof VOWEL_SOUNDS];
+export type PhonemeType = 'vowel' | 'consonant' | 'blend' | 'digraph';
 
-export interface Phoneme {
+export type VowelType = 'short' | 'long';
+
+export interface BasePhonemeInfo {
   sound: string;
-  type: PhonemeType;
-  vowelSound?: VowelSound;
+  examples: string[];
+  description: string;
+}
+
+export interface PhonemeWithIPA extends BasePhonemeInfo {
+  ipa: string;
+}
+
+export interface BlendInfo extends BasePhonemeInfo {
+  components: string[];
+  ipa?: string;
 }
 
 export interface WordPhonics {
   word: string;
-  phonemes: Phoneme[];
+  phonemes: string[];
   translation: string;
-  translationPhonemes: Phoneme[];
+  translationPhonemes: string[];
 }
+
+export type PhonemeConfig = typeof config;

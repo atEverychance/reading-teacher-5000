@@ -1,56 +1,43 @@
+import { breakIntoPhonemes } from '../../utils/phonics.js';
 import type { CurriculumLevel } from '../../types/curriculum.js';
-import type { WordData } from '../../types/word.js';
 
-const words: WordData[] = [
-  {
-    english: 'pig',
-    translation: 'cochon',
-    phonemes: ['p', 'ɪ', 'g'],
-    translationPhonemes: ['k', 'ɔ', 'ʃ', 'ɔ̃'],
-    examples: [
-      'The pig is pink.',
-      'I saw a big pig.',
-      'The pig likes to play in the mud.'
-    ]
-  },
-  {
-    english: 'big',
-    translation: 'grand',
-    phonemes: ['b', 'ɪ', 'g'],
-    translationPhonemes: ['g', 'ʁ', 'ɑ̃'],
-    examples: [
-      'Look at the big tree.',
-      'The big dog is friendly.',
-      'I have a big house.'
-    ]
-  },
-  {
-    english: 'dig',
-    translation: 'creuser',
-    phonemes: ['d', 'ɪ', 'g'],
-    translationPhonemes: ['k', 'ʁ', 'ø', 'z', 'e'],
-    examples: [
-      'Dogs like to dig holes.',
-      'We can dig in the sand.',
-      "Let's dig for treasure!"
-    ]
-  }
-];
-
-export const level2: CurriculumLevel = {
+const level2: CurriculumLevel = {
   level: 2,
-  title: 'Short I Words',
-  description: 'Practice reading simple words with the short "i" sound.',
+  title: "Long Vowels",
+  description: "Practice words with long vowel sounds and silent 'e'.",
+  teachingStrategies: [
+    "Introduce the magic 'e' rule",
+    "Compare short and long vowel sounds",
+    "Practice sight words",
+    "Use word families to build confidence"
+  ],
   wordFamilies: [
     {
-      pattern: 'ig',
-      words: words.filter(w => w.english.endsWith('ig'))
+      pattern: "ake",
+      words: [
+        {
+          english: "cake",
+          french: "gâteau",
+          phonemes: breakIntoPhonemes('cake'),
+          translationPhonemes: breakIntoPhonemes('gâteau'),
+          examples: [
+            "The birthday cake.",
+            "Let's bake a cake."
+          ]
+        },
+        {
+          english: "make",
+          french: "faire",
+          phonemes: breakIntoPhonemes('make'),
+          translationPhonemes: breakIntoPhonemes('faire'),
+          examples: [
+            "Make a wish.",
+            "Let's make something."
+          ]
+        }
+      ]
     }
-  ],
-  teachingStrategies: [
-    'Compare short "i" with long "i" sounds',
-    'Use word family patterns',
-    'Practice with rhyming words',
-    'Create simple sentences'
   ]
 };
+
+export default level2;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Star, Shuffle } from 'lucide-react';
 import { usePhonics } from '../../hooks/usePhonics.js';
 import { initAudio } from '../../data/phonics/sounds.js';
+import { getPhonemeInfo } from '../../data/phonics/phonemeConfig.js';
 
 interface SimpleWordDisplayProps {
   word: string;
@@ -71,23 +72,27 @@ export function SimpleWordDisplay({ word, phonemes, onComplete, onTeacherClick }
 
       {/* Phoneme Buttons */}
       <div className="flex flex-wrap gap-4 justify-center mt-8">
-        {phonemes.map((phoneme, index) => (
-          <button
-            key={index}
-            onClick={() => handlePhonemeClick(index)}
-            disabled={isPlaying}
-            className={`
-              text-4xl font-display font-bold px-6 py-3 rounded-xl
-              transition-all transform hover:scale-105
-              disabled:opacity-50
-              ${completedPhonemes.includes(index)
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-white/75 text-gray-700 hover:bg-white shadow'}
-            `}
-          >
-            {phoneme}
-          </button>
-        ))}
+        {phonemes.map((phoneme, index) => {
+          const info = getPhonemeInfo(phoneme);
+          return (
+            <button
+              key={index}
+              onClick={() => handlePhonemeClick(index)}
+              disabled={isPlaying}
+              className={`
+                text-4xl font-display font-bold px-6 py-3 rounded-xl
+                transition-all transform hover:scale-105
+                disabled:opacity-50
+                ${completedPhonemes.includes(index)
+                  ? 'bg-green-500 text-white shadow-lg'
+                  : 'bg-white/75 text-gray-700 hover:bg-white shadow'}
+              `}
+              title={info?.description}
+            >
+              {phoneme}
+            </button>
+          );
+        })}
       </div>
 
       {/* Success Button */}

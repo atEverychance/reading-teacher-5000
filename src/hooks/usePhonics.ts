@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { readWord, playPhoneme } from '../data/phonics/sounds.js';
+import { getPhonemeSound } from '../data/phonics/phonemeConfig.js';
 
 interface UsePhonicsReturn {
   speak: (word: string, phonemes: string[]) => void;
@@ -28,7 +29,8 @@ export function usePhonics(): UsePhonicsReturn {
     setIsPlaying(true);
     
     try {
-      await playPhoneme(phoneme);
+      const sound = getPhonemeSound(phoneme);
+      await playPhoneme(sound);
     } catch (error) {
       console.error('Error playing phoneme:', error);
     } finally {

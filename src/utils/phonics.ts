@@ -1,71 +1,50 @@
-import { FRENCH_PHONEMES, FRENCH_SYLLABLE_RULES } from '../data/phonics/french.js';
-import { Phoneme } from '../data/phonics/types.js';
-import { PHONEME_TYPES, VOWEL_SOUNDS } from '../data/phonics/constants.js';
+import { PhonemeType } from '../data/phonics/types.js';
+import { getPhonemeInfo } from '../data/phonics/phonemeConfig.js';
 
-export function breakIntoPhonemes(word: string, isFrench: boolean = false): Phoneme[] {
-  const phonemes: Phoneme[] = [];
-  let remaining = word.toLowerCase();
+const FRENCH_PHONEMES = new Set(['é', 'è', 'ê', 'ë', 'à', 'â', 'î', 'ï', 'ô', 'û', 'ù', 'ç']);
+
+export function breakIntoPhonemes(word: string): string[] {
+  const phonemes: string[] = [];
+  let remaining = word;
+  let isFrench = false;
 
   while (remaining.length > 0) {
-    let matched = false;
+    // Check for French phonemes
+    if (FRENCH_PHONEMES.has(remaining[0])) {
+      phonemes.push(remaining[0]);
+      remaining = remaining.slice(1);
+      isFrench = true;
+      continue;
+    }
 
-    // Check for digraphs and special sounds first
-    const patterns = isFrench ? FRENCH_SYLLABLE_RULES : [
-      { pattern: /^(ch|sh|th|wh|ph|gh|ck)/, type: PHONEME_TYPES.DIGRAPH },
-      { pattern: /^(tr|dr)/, type: PHONEME_TYPES.BLEND },
-      { pattern: /^([bcdfghjklmnpqrstvwxz][rlw]|[st][rlw]|[s][mnptkw])/, type: PHONEME_TYPES.BLEND },
-      { pattern: /^([aeiou][aeiou])/, type: PHONEME_TYPES.VOWEL }
+    // Try to match phoneme patterns
+    const patterns = [
+      { pattern: /^(ch|sh|th|wh|ph|gh|ck)/, type: 'digraph' as PhonemeType },
+      { pattern: /^(tr|dr)/, type: 'blend' as PhonemeType },
+      { pattern: /^([bcdfghjklmnpqrstvwxz][rlw]|[st][rlw]|[s][mnptkw])/, type: 'blend' as PhonemeType },
+      { pattern: /^([aeiou][aeiou])/, type: 'vowel' as PhonemeType }
     ];
 
-    for (const { pattern, type } of patterns) {
+    let matched = false;
+    for (const { pattern } of patterns) {
       const match = remaining.match(pattern);
-      if (match && match.index === 0) {
-        phonemes.push({
-          sound: match[0],
-          type: type as any,
-          ...(type === PHONEME_TYPES.VOWEL && !isFrench && {
-            vowelSound: getVowelSound(match[0])
-          })
-        });
-        remaining = remaining.slice(match[0].length);
-        matched = true;
-        break;
+      if (match) {
+        const [phoneme] = match;
+        if (getPhonemeInfo(phoneme)) {
+          phonemes.push(phoneme);
+          remaining = remaining.slice(phoneme.length);
+          matched = true;
+          break;
+        }
       }
     }
 
-    // If no special pattern matched, treat as single character
     if (!matched) {
-      const char = remaining[0];
-      const isVowel = /[aeiouéèêëïîôöûü]/i.test(char);
-      
-      phonemes.push({
-        sound: char,
-        type: isVowel ? PHONEME_TYPES.VOWEL : PHONEME_TYPES.CONSONANT,
-        ...(isVowel && !isFrench && {
-          vowelSound: getVowelSound(char)
-        })
-      });
+      // Single character phoneme
+      phonemes.push(remaining[0]);
       remaining = remaining.slice(1);
     }
   }
 
   return phonemes;
-}
-
-function getVowelSound(vowel: string): typeof VOWEL_SOUNDS[keyof typeof VOWEL_SOUNDS] {
-  const vowelMap = {
-    a: VOWEL_SOUNDS.SHORT_A,
-    e: VOWEL_SOUNDS.SHORT_E,
-    i: VOWEL_SOUNDS.SHORT_I,
-    o: VOWEL_SOUNDS.SHORT_O,
-    u: VOWEL_SOUNDS.SHORT_U,
-    ai: VOWEL_SOUNDS.LONG_A,
-    ee: VOWEL_SOUNDS.LONG_E,
-    ea: VOWEL_SOUNDS.LONG_E,
-    ie: VOWEL_SOUNDS.LONG_I,
-    oa: VOWEL_SOUNDS.LONG_O,
-    oo: VOWEL_SOUNDS.LONG_U
-  };
-
-  return vowelMap[vowel.toLowerCase()] || VOWEL_SOUNDS.SHORT_A;
 }

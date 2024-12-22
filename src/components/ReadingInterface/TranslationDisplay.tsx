@@ -1,11 +1,10 @@
 import React from 'react';
-import { PhonemeButton } from './PhonemeButton';
-import type { Phoneme } from '../../data/phonics/types';
-import type { CharacterType } from '../../types';
+import { PhonemeButton } from './PhonemeButton.js';
+import type { CharacterType } from '../../types/index.js';
 
 interface Props {
   translation: string;
-  phonemes: Phoneme[];
+  phonemes: string[];
   playedPhonemes: Set<string>;
   onPhonemeClick: (sound: string) => void;
   onTranslationClick: () => void;
@@ -38,12 +37,11 @@ export function TranslationDisplay({
       <div className="flex gap-4 justify-center">
         {phonemes.map((phoneme, index) => (
           <PhonemeButton
-            key={`${phoneme.sound}-${index}`}
+            key={`${phoneme}-${index}`}
             phoneme={phoneme}
-            isPlayed={playedPhonemes.has(phoneme.sound)}
-            onClick={() => onPhonemeClick(phoneme.sound)}
-            characterType={characterType}
-            isTranslation
+            isCompleted={playedPhonemes.has(phoneme)}
+            onClick={() => onPhonemeClick(phoneme)}
+            isPlaying={false}
           />
         ))}
       </div>

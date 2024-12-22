@@ -1,12 +1,14 @@
-import { LEVEL1_WORDS } from './level1.js';
-import { LEVEL2_WORDS } from './level2.js';
-import { LEVEL3_WORDS } from './level3.js';
-import { LEVEL4_WORDS } from './level4.js';
+import level1 from './level1.js';
+import level2 from './level2.js';
+import level3 from './level3.js';
+import level4 from './level4.js';
 import type { WordPhonics } from './types.js';
 
-export const WORD_DATA: Record<string, WordPhonics> = {
-  ...LEVEL1_WORDS,
-  ...LEVEL2_WORDS,
-  ...LEVEL3_WORDS,
-  ...LEVEL4_WORDS
-};
+const WORD_DATA: WordPhonics[] = [
+  ...level1,
+  ...level2,
+  ...level3,
+  ...level4
+];
+
+export { WORD_DATA };

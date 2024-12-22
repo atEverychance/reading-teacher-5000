@@ -1,56 +1,43 @@
+import { breakIntoPhonemes } from '../../utils/phonics.js';
 import type { CurriculumLevel } from '../../types/curriculum.js';
-import type { WordData } from '../../types/word.js';
 
-const words: WordData[] = [
-  {
-    english: 'hop',
-    translation: 'sauter',
-    phonemes: ['h', 'ɒ', 'p'],
-    translationPhonemes: ['s', 'o', 't', 'e'],
-    examples: [
-      'The rabbit can hop.',
-      'Hop on one foot.',
-      'Watch the frog hop.'
-    ]
-  },
-  {
-    english: 'top',
-    translation: 'haut',
-    phonemes: ['t', 'ɒ', 'p'],
-    translationPhonemes: ['o'],
-    examples: [
-      'The top of the tree.',
-      'Spin the top.',
-      'Climb to the top.'
-    ]
-  },
-  {
-    english: 'pop',
-    translation: 'éclater',
-    phonemes: ['p', 'ɒ', 'p'],
-    translationPhonemes: ['e', 'k', 'l', 'a', 't', 'e'],
-    examples: [
-      'Pop the bubble.',
-      'The balloon will pop.',
-      'Listen to the popcorn pop.'
-    ]
-  }
-];
-
-export const level3: CurriculumLevel = {
+const level3: CurriculumLevel = {
   level: 3,
-  title: 'Short O Words',
-  description: 'Practice reading simple words with the short "o" sound.',
+  title: "Consonant Blends",
+  description: "Learn to read words with consonant blends at the beginning and end.",
+  teachingStrategies: [
+    "Practice common blends like 'st', 'bl', 'tr'",
+    "Break words into parts",
+    "Use visual aids to show blend patterns",
+    "Create word families with blends"
+  ],
   wordFamilies: [
     {
-      pattern: 'op',
-      words: words.filter(w => w.english.endsWith('op'))
+      pattern: "tr",
+      words: [
+        {
+          english: "tree",
+          french: "arbre",
+          phonemes: breakIntoPhonemes('tree'),
+          translationPhonemes: breakIntoPhonemes('arbre'),
+          examples: [
+            "Climb the tree.",
+            "A tall tree."
+          ]
+        },
+        {
+          english: "train",
+          french: "train",
+          phonemes: breakIntoPhonemes('train'),
+          translationPhonemes: breakIntoPhonemes('train'),
+          examples: [
+            "Take the train.",
+            "The train is fast."
+          ]
+        }
+      ]
     }
-  ],
-  teachingStrategies: [
-    'Focus on the short "o" sound',
-    'Use word family patterns',
-    'Practice with action words',
-    'Create movement activities'
   ]
 };
+
+export default level3;
