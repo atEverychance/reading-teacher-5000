@@ -42,12 +42,13 @@ export function ReadingInterface() {
       }
 
       if (!isTeacherPanelOpen) {
-        if (e.key === 't' || e.key === 'T') {
+        if (e.key === '/' || e.key === '?') {
+          e.preventDefault(); // Prevent browser's find dialog
           setIsTeacherPanelOpen(true);
         } else if (e.key === 'a' || e.key === 'A' || e.key === 'd' || e.key === 'D') {
           navigate('/profile');
         }
-      } else if (e.key === 'Escape') {
+      } else if (e.key === 'Escape' || e.key === '/' || e.key === '?') {
         setIsTeacherPanelOpen(false);
       }
     };
@@ -165,8 +166,9 @@ export function ReadingInterface() {
       <div className="fixed top-4 right-4">
         <button
           onClick={() => setIsTeacherPanelOpen(prev => !prev)}
-          className="p-2 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors group"
+          className="p-2 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors group relative"
           aria-label="Toggle teacher's guide"
+          title="Teacher's Guide (Press '/' or '?' to toggle)"
         >
           <GraduationCap className={`w-6 h-6 transition-transform ${isTeacherPanelOpen ? 'rotate-12' : ''} group-hover:scale-110`} />
         </button>
