@@ -1,0 +1,32 @@
+{
+  "name": "Reading Teacher 5000 - Core Word Set",
+  "description": "A progressive phonics-based curriculum for early readers",
+  "version": "1.0.0",
+  "language": "english",
+  "targetAge": {
+    "min": 4,
+    "max": 8
+  },
+  "levels": [
+    {
+      "id": 1,
+      "title": "CVC Words & Word Families",
+      "description": "Introduction to basic word patterns through fairy tales"
+    },
+    {
+      "id": 2,
+      "title": "Sight Words & Short Vowels",
+      "description": "Common fairy tale words and magic e'e' patterns"
+    },
+    {
+      "id": 3,
+      "title": "Blends & Digraphs",
+      "description": "Learning common sound combinations through fairy tales"
+    },
+    {
+      "id": 4,
+      "title": "Multi-Syllabic Words",
+      "description": "Learning to read longer words through syllable patterns"
+    }
+  ]
+}

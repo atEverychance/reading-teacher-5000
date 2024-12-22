@@ -1,5 +1,5 @@
-import { PHONEME_TYPES as P, VOWEL_SOUNDS as V } from './constants';
-import type { WordPhonics } from './types';
+import { PHONEME_TYPES as P, VOWEL_SOUNDS as V } from './constants.js';
+import type { WordPhonics } from './types.js';
 
 export const LEVEL3_WORDS: Record<string, WordPhonics> = {
   'dragon': {

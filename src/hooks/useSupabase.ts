@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { supabase } from '../lib/supabase';
-import { useStore } from '../store/useStore';
-import type { Character } from '../types';
-import { mapCharacterFromDb, mapCharacterToDb } from '../lib/database';
+import { supabase } from '../lib/supabase.js';
+import { useStore } from '../store/useStore.js';
+import type { Character } from '../types/index.js';
+import { mapCharacterFromDb, mapCharacterToDb } from '../lib/database.js';
 
 export function useSupabase() {
   const { setCharacters, addCharacter } = useStore();

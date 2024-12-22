@@ -1,0 +1,251 @@
+{
+  "wordFamilies": [
+    {
+      "pattern": "-eak",
+      "words": [
+        {
+          "english": "break",
+          "translation": "casser",
+          "phonemes": ["b", "r", "eak"],
+          "translationPhonemes": ["k", "a", "s", "e", "r"],
+          "examples": ["Don't break the magic spell!", "A break in the clouds reveals the sun!"]
+        },
+        {
+          "english": "sneak",
+          "translation": "se faufiler",
+          "phonemes": ["s", "n", "eak"],
+          "translationPhonemes": ["s", "e", "f", "o", "f", "i", "l", "e", "r"],
+          "examples": ["Sneak past the sleeping dragon!", "Can you sneak a cookie from the jar?"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eet",
+      "words": [
+        {
+          "english": "fleet",
+          "translation": "flotte",
+          "phonemes": ["f", "l", "eet"],
+          "translationPhonemes": ["f", "l", "o", "t", "t", "e"],
+          "examples": ["A fleet of ships sails the ocean!", "The fleet of fairy boats glides by!"]
+        },
+        {
+          "english": "sweet",
+          "translation": "doux",
+          "phonemes": ["s", "w", "eet"],
+          "translationPhonemes": ["d", "o", "u", "x"],
+          "examples": ["A sweet treat from Belle's bakery!", "Sweet dreams of adventure!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eal",
+      "words": [
+        {
+          "english": "steal",
+          "translation": "voler",
+          "phonemes": ["s", "t", "eal"],
+          "translationPhonemes": ["v", "o", "l", "e", "r"],
+          "examples": ["Don't steal the treasure!", "Steal a moment to enjoy the view!"]
+        },
+        {
+          "english": "deal",
+          "translation": "accord",
+          "phonemes": ["d", "eal"],
+          "translationPhonemes": ["a", "c", "c", "o", "r", "d"],
+          "examples": ["Make a fair deal with your friends!", "A deal for a magical adventure!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ide",
+      "words": [
+        {
+          "english": "guide",
+          "translation": "guider",
+          "phonemes": ["g", "u", "i", "d"],
+          "translationPhonemes": ["g", "i", "d", "e", "r"],
+          "examples": ["Guide your friends through the maze!", "A star to guide your way home!"]
+        },
+        {
+          "english": "slide",
+          "translation": "glisser",
+          "phonemes": ["s", "l", "i", "d"],
+          "translationPhonemes": ["g", "l", "i", "s", "s", "e", "r"],
+          "examples": ["Slide down the rainbow slide!", "A slide made of ice!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ock",
+      "words": [
+        {
+          "english": "shock",
+          "translation": "choc",
+          "phonemes": ["sh", "o", "ck"],
+          "translationPhonemes": ["c", "h", "o", "c"],
+          "examples": ["A shock of lightning in the storm!", "Don't be in shock at the surprise!"]
+        },
+        {
+          "english": "block",
+          "translation": "bloc",
+          "phonemes": ["b", "l", "o", "ck"],
+          "translationPhonemes": ["b", "l", "o", "c"],
+          "examples": ["A block tower reaching the sky!", "Can you block the ball?"]
+        }
+      ]
+    },
+    {
+      "pattern": "-own",
+      "words": [
+        {
+          "english": "thrown",
+          "translation": "jeté",
+          "phonemes": ["th", "r", "o", "wn"],
+          "translationPhonemes": ["j", "e", "t", "e"],
+          "examples": ["A ball thrown into the air!", "Don't let your dreams be thrown away!"]
+        },
+        {
+          "english": "grown",
+          "translation": "grandir",
+          "phonemes": ["g", "r", "o", "wn"],
+          "translationPhonemes": ["g", "r", "a", "n", "d", "i", "r"],
+          "examples": ["The flowers have grown so tall!", "I've grown since last summer!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eat",
+      "words": [
+        {
+          "english": "treat",
+          "translation": "gâterie",
+          "phonemes": ["t", "r", "e", "a", "t"],
+          "translationPhonemes": ["g", "â", "t", "e", "r", "i", "e"],
+          "examples": ["A special treat for good behavior!", "Let's have a sweet treat!"]
+        },
+        {
+          "english": "seat",
+          "translation": "siège",
+          "phonemes": ["s", "e", "a", "t"],
+          "translationPhonemes": ["s", "i", "è", "g", "e"],
+          "examples": ["Take a seat at the table!", "A cozy seat by the fire!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ilt",
+      "words": [
+        {
+          "english": "built",
+          "translation": "construit",
+          "phonemes": ["b", "u", "i", "l", "t"],
+          "translationPhonemes": ["k", "o", "n", "s", "t", "r", "u", "i", "t"],
+          "examples": ["Built a castle with blocks!", "A house built for adventure!"]
+        },
+        {
+          "english": "tilt",
+          "translation": "incliner",
+          "phonemes": ["t", "i", "l", "t"],
+          "translationPhonemes": ["i", "n", "c", "l", "i", "n", "e", "r"],
+          "examples": ["Tilt the picture to see it better!", "A tilt of the hat to you!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-end",
+      "words": [
+        {
+          "english": "spend",
+          "translation": "dépenser",
+          "phonemes": ["s", "p", "e", "n", "d"],
+          "translationPhonemes": ["d", "é", "p", "e", "n", "s", "e", "r"],
+          "examples": ["Spend time with family!", "A day to spend at the amusement park!"]
+        },
+        {
+          "english": "tend",
+          "translation": "prendre soin",
+          "phonemes": ["t", "e", "n", "d"],
+          "translationPhonemes": ["p", "r", "e", "n", "d", "r", "e", "s", "o", "i", "n"],
+          "examples": ["Tend to the garden with care!", "A friend to tend to your needs!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ash",
+      "words": [
+        {
+          "english": "flash",
+          "translation": "éclair",
+          "phonemes": ["f", "l", "a", "sh"],
+          "translationPhonemes": ["e", "c", "l", "a", "i", "r"],
+          "examples": ["A flash of light in the dark!", "Flash your brightest smile!"]
+        },
+        {
+          "english": "crash",
+          "translation": "collision",
+          "phonemes": ["k", "r", "a", "sh"],
+          "translationPhonemes": ["c", "o", "l", "l", "i", "s", "i", "o", "n"],
+          "examples": ["A crash of thunder in the sky!", "Watch the cars crash in the race!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ice",
+      "words": [
+        {
+          "english": "slice",
+          "translation": "tranche",
+          "phonemes": ["s", "l", "a", "i", "c", "e"],
+          "translationPhonemes": ["t", "r", "a", "n", "c", "h", "e"],
+          "examples": ["Slice the cake for the party!", "A slice of adventure awaits!"]
+        },
+        {
+          "english": "dice",
+          "translation": "dé",
+          "phonemes": ["d", "a", "i", "c", "e"],
+          "translationPhonemes": ["d", "é"],
+          "examples": ["Roll the dice for fun!", "A game of dice with friends!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ice",
+      "words": [
+        {
+          "english": "mice",
+          "translation": "souris",
+          "phonemes": ["m", "a", "i", "c", "e"],
+          "translationPhonemes": ["s", "o", "u", "r", "i", "s"],
+          "examples": ["Mice in the house!", "Watch the little mice play!"]
+        },
+        {
+          "english": "spice",
+          "translation": "épice",
+          "phonemes": ["s", "p", "a", "i", "c", "e"],
+          "translationPhonemes": ["é", "p", "i", "c", "e"],
+          "examples": ["Add some spice to your dish!", "A pinch of spice makes it nice!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ock",
+      "words": [
+        {
+          "english": "rock",
+          "translation": "roche",
+          "phonemes": ["r", "o", "c", "k"],
+          "translationPhonemes": ["r", "o", "c", "h", "e"],
+          "examples": ["A big rock in the ocean!", "Find a rock for your collection!"]
+        },
+        {
+          "english": "dock",
+          "translation": "quai",
+          "phonemes": ["d", "o", "c", "k"],
+          "translationPhonemes": ["q", "u", "a", "i"],
+          "examples": ["Park the boat at the dock!", "The dock is busy with boats!"]
+        }
+      ]
+    }
+  ]
+}

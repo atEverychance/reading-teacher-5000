@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Star, Shuffle } from 'lucide-react';
-import { usePhonics } from '../../hooks/usePhonics';
-import type { Phoneme } from '../../data/phonics/types';
+import { usePhonics } from '../../hooks/usePhonics.js';
+import { initAudio } from '../../data/phonics/sounds.js';
 
-interface Props {
+interface SimpleWordDisplayProps {
   word: string;
+  phonemes: string[];
   onComplete: (success: boolean) => void;
+  onTeacherClick: () => void;
 }
 
-export function SimpleWordDisplay({ word, onComplete }: Props) {
+export function SimpleWordDisplay({ word, phonemes, onComplete, onTeacherClick }: SimpleWordDisplayProps) {
   const [completedPhonemes, setCompletedPhonemes] = useState<number[]>([]);
   const [showSuccess, setShowSuccess] = useState(false);
-  const { phonemes, playPhoneme, playWord } = usePhonics(word);
+  const { speak, speakPhoneme, isPlaying } = usePhonics();
+
+  // Initialize audio on mount
+  useEffect(() => {
+    initAudio();
+  }, []);
 
   // Reset states when word changes
   useEffect(() => {
@@ -20,13 +27,13 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
   }, [word]);
 
   const handleWordClick = () => {
-    playWord(false);
+    speak(word, []);
     setShowSuccess(true);
   };
 
   const handlePhonemeClick = (index: number) => {
     if (!completedPhonemes.includes(index)) {
-      playPhoneme(phonemes[index], false);
+      speakPhoneme(phonemes[index]);
       const newCompleted = [...completedPhonemes, index];
       setCompletedPhonemes(newCompleted);
     }
@@ -47,6 +54,7 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
       {/* Main Word Button */}
       <button
         onClick={handleWordClick}
+        disabled={isPlaying}
         className={`
           text-7xl font-heading font-extrabold
           px-12 py-6 rounded-2xl
@@ -54,6 +62,7 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
           [text-shadow:_2px_2px_0_rgb(255_255_255_/_50%)]
           hover:scale-105 transition-transform
           shadow-lg hover:shadow-xl
+          disabled:opacity-50
           ${completedPhonemes.length === phonemes.length ? 'text-green-600' : ''}
         `}
       >
@@ -66,15 +75,17 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
           <button
             key={index}
             onClick={() => handlePhonemeClick(index)}
+            disabled={isPlaying}
             className={`
               text-4xl font-display font-bold px-6 py-3 rounded-xl
               transition-all transform hover:scale-105
+              disabled:opacity-50
               ${completedPhonemes.includes(index)
                 ? 'bg-green-500 text-white shadow-lg'
                 : 'bg-white/75 text-gray-700 hover:bg-white shadow'}
             `}
           >
-            {phoneme.sound}
+            {phoneme}
           </button>
         ))}
       </div>
@@ -83,6 +94,7 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
       {showSuccess && (
         <button
           onClick={handleComplete}
+          disabled={isPlaying}
           className={`
             fixed bottom-32 right-8
             px-8 py-4 rounded-2xl
@@ -94,6 +106,7 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
             transition-all duration-300
             animate-bigBounce
             hover:from-yellow-500 hover:to-orange-600
+            disabled:opacity-50
           `}
         >
           <Star className="w-8 h-8 animate-spin" />
@@ -104,12 +117,14 @@ export function SimpleWordDisplay({ word, onComplete }: Props) {
       {/* New Word Button */}
       <button
         onClick={handleSkipWord}
+        disabled={isPlaying}
         className={`
           mt-8 p-4 rounded-xl
           text-xl font-display font-semibold
           bg-gray-100 text-gray-600
           hover:bg-gray-200 hover:text-gray-700
           transition-all transform hover:scale-105
+          disabled:opacity-50
         `}
         aria-label="New Word"
       >

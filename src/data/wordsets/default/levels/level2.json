@@ -1,0 +1,251 @@
+{
+  "wordFamilies": [
+    {
+      "pattern": "-ake",
+      "words": [
+        {
+          "english": "cake",
+          "translation": "gâteau",
+          "phonemes": ["k", "e", "i", "k"],
+          "translationPhonemes": ["g", "a", "t", "e", "a", "u"],
+          "examples": ["A birthday cake", "A cake for dessert"]
+        },
+        {
+          "english": "rake",
+          "translation": "râteau",
+          "phonemes": ["r", "e", "i", "k"],
+          "translationPhonemes": ["r", "a", "t", "e", "a", "u"],
+          "examples": ["A rake for leaves", "Rake the yard"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ite",
+      "words": [
+        {
+          "english": "bite",
+          "translation": "morsure",
+          "phonemes": ["b", "a", "i", "t"],
+          "translationPhonemes": ["m", "o", "r", "s", "u", "r", "e"],
+          "examples": ["Take a bite", "A bite to eat"]
+        },
+        {
+          "english": "excite",
+          "translation": "exciter",
+          "phonemes": ["i", "k", "s", "a", "i", "t"],
+          "translationPhonemes": ["e", "x", "i", "t", "e", "r"],
+          "examples": ["Excite the crowd", "An exciting game"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ole",
+      "words": [
+        {
+          "english": "hole",
+          "translation": "trou",
+          "phonemes": ["h", "o", "l"],
+          "translationPhonemes": ["t", "r", "o", "u"],
+          "examples": ["A hole in the ground", "A hole in my sock"]
+        },
+        {
+          "english": "role",
+          "translation": "rôle",
+          "phonemes": ["r", "o", "l"],
+          "translationPhonemes": ["r", "o", "l", "e"],
+          "examples": ["My role in the play", "A role model"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ore",
+      "words": [
+        {
+          "english": "core",
+          "translation": "coeur",
+          "phonemes": ["k", "o", "r"],
+          "translationPhonemes": ["c", "o", "e", "u", "r"],
+          "examples": ["The core of the apple", "A core workout"]
+        },
+        {
+          "english": "more",
+          "translation": "plus",
+          "phonemes": ["m", "o", "r"],
+          "translationPhonemes": ["p", "l", "u", "s"],
+          "examples": ["I want more", "More to come"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ain",
+      "words": [
+        {
+          "english": "pain",
+          "translation": "douleur",
+          "phonemes": ["p", "e", "i", "n"],
+          "translationPhonemes": ["d", "o", "u", "l", "e", "u", "r"],
+          "examples": ["A pain in my head", "Pain relief"]
+        },
+        {
+          "english": "gain",
+          "translation": "gagner",
+          "phonemes": ["g", "e", "i", "n"],
+          "translationPhonemes": ["g", "a", "g", "n", "e", "r"],
+          "examples": ["Gain weight", "Gain experience"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ide",
+      "words": [
+        {
+          "english": "ride",
+          "translation": "monter",
+          "phonemes": ["r", "i", "d"],
+          "translationPhonemes": ["m", "o", "n", "t", "e", "r"],
+          "examples": ["Ride a bike", "Ride a horse"]
+        },
+        {
+          "english": "slide",
+          "translation": "glisser",
+          "phonemes": ["s", "l", "i", "d"],
+          "translationPhonemes": ["g", "l", "i", "s", "s", "e", "r"],
+          "examples": ["Slide down the rainbow slide!", "A slide made of ice!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ine",
+      "words": [
+        {
+          "english": "mine",
+          "translation": "mienne",
+          "phonemes": ["m", "a", "i", "n"],
+          "translationPhonemes": ["m", "i", "e", "n", "n", "e"],
+          "examples": ["My mine", "A mine shaft"]
+        },
+        {
+          "english": "line",
+          "translation": "ligne",
+          "phonemes": ["l", "a", "i", "n"],
+          "translationPhonemes": ["l", "i", "g", "n", "e"],
+          "examples": ["A line in the sand", "A line of code"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ong",
+      "words": [
+        {
+          "english": "song",
+          "translation": "chanson",
+          "phonemes": ["s", "o", "n", "g"],
+          "translationPhonemes": ["c", "h", "a", "n", "s", "o", "n"],
+          "examples": ["Sing a song", "A song in my heart"]
+        },
+        {
+          "english": "long",
+          "translation": "long",
+          "phonemes": ["l", "o", "n", "g"],
+          "translationPhonemes": ["l", "o", "n", "g"],
+          "examples": ["A long time", "A long distance"]
+        }
+      ]
+    },
+    {
+      "pattern": "-unk",
+      "words": [
+        {
+          "english": "bunk",
+          "translation": "lit",
+          "phonemes": ["b", "u", "n", "k"],
+          "translationPhonemes": ["l", "i", "t"],
+          "examples": ["A bunk bed", "Bunk in the army"]
+        },
+        {
+          "english": "chunk",
+          "translation": "morceau",
+          "phonemes": ["ch", "u", "n", "k"],
+          "translationPhonemes": ["m", "o", "r", "c", "e", "a", "u"],
+          "examples": ["A chunk of ice", "Chunky monkey"]
+        }
+      ]
+    },
+    {
+      "pattern": "-unk",
+      "words": [
+        {
+          "english": "drunk",
+          "translation": "ivre",
+          "phonemes": ["d", "r", "u", "n", "k"],
+          "translationPhonemes": ["i", "v", "r", "e"],
+          "examples": ["Drunk driving", "Feeling drunk"]
+        },
+        {
+          "english": "shunk",
+          "translation": "puant",
+          "phonemes": ["s", "h", "u", "n", "k"],
+          "translationPhonemes": ["p", "u", "a", "n", "t"],
+          "examples": ["A shunk smell", "Shunk in the trash"]
+        }
+      ]
+    },
+    {
+      "pattern": "-old",
+      "words": [
+        {
+          "english": "old",
+          "translation": "vieux",
+          "phonemes": ["o", "l", "d"],
+          "translationPhonemes": ["v", "i", "e", "u", "x"],
+          "examples": ["An old car", "An old friend"]
+        },
+        {
+          "english": "mold",
+          "translation": "moule",
+          "phonemes": ["m", "o", "l", "d"],
+          "translationPhonemes": ["m", "o", "u", "l", "e"],
+          "examples": ["A mold of clay", "Mold on the wall"]
+        }
+      ]
+    },
+    {
+      "pattern": "-old",
+      "words": [
+        {
+          "english": "gold",
+          "translation": "or",
+          "phonemes": ["g", "o", "l", "d"],
+          "translationPhonemes": ["o", "r"],
+          "examples": ["A gold medal", "Gold jewelry"]
+        },
+        {
+          "english": "cold",
+          "translation": "froid",
+          "phonemes": ["k", "o", "l", "d"],
+          "translationPhonemes": ["f", "r", "o", "i", "d"],
+          "examples": ["A cold winter", "A cold drink"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ind",
+      "words": [
+        {
+          "english": "find",
+          "translation": "trouver",
+          "phonemes": ["f", "a", "i", "n", "d"],
+          "translationPhonemes": ["t", "r", "o", "u", "v", "e", "r"],
+          "examples": ["Find the key", "Find a solution"]
+        },
+        {
+          "english": "mind",
+          "translation": "esprit",
+          "phonemes": ["m", "a", "i", "n", "d"],
+          "translationPhonemes": ["e", "s", "p", "r", "i", "t"],
+          "examples": ["On my mind", "A peaceful mind"]
+        }
+      ]
+    }
+  ]
+}

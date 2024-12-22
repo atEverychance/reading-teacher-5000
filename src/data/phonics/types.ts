@@ -1,4 +1,4 @@
-import { PHONEME_TYPES, VOWEL_SOUNDS } from './constants';
+import { PHONEME_TYPES, VOWEL_SOUNDS } from './constants.js';
 
 export type PhonemeType = typeof PHONEME_TYPES[keyof typeof PHONEME_TYPES];
 export type VowelSound = typeof VOWEL_SOUNDS[keyof typeof VOWEL_SOUNDS];

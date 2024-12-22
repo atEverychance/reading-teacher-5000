@@ -1,0 +1,56 @@
+{
+  "strategies": {
+    "level1": [
+      "Use sound tapping for each phoneme",
+      "Create word family charts",
+      "Practice with rhyming pairs",
+      "Use manipulatives for letter sounds"
+    ],
+    "level2": [
+      "Use multisensory approaches - visual",
+      "auditory",
+      "and kinesthetic",
+      "Practice with word families and patterns",
+      "Create engaging stories using target words",
+      "Use movement and gestures to reinforce learning"
+    ],
+    "level3": [
+      "Use hand motions to represent blending sounds together",
+      "Practice with alliterative phrases",
+      "Create visual cards showing letter combinations",
+      "Use movement activities for blend practice"
+    ],
+    "level4": [
+      "Use syllable division rules consistently",
+      "Practice with word building cards",
+      "Create visual syllable charts",
+      "Use movement to mark syllables"
+    ]
+  },
+  "assessmentCriteria": {
+    "level1": [
+      "Can identify and read CVC words",
+      "Recognizes common word families",
+      "Demonstrates understanding of short vowel sounds",
+      "Can blend sounds to form words"
+    ],
+    "level2": [
+      "Recognizes and reads common sight words",
+      "Understands magic e'e' pattern",
+      "Can identify and read short vowel words",
+      "Uses sight words in simple sentences"
+    ],
+    "level3": [
+      "Can identify and read words with blends",
+      "Recognizes common digraphs",
+      "Uses blends in simple sentences",
+      "Demonstrates phonemic awareness"
+    ],
+    "level4": [
+      "Can break words into syllables",
+      "Reads multi-syllabic words fluently",
+      "Understands compound words",
+      "Uses longer words in sentences"
+    ]
+  }
+}

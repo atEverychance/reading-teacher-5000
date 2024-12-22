@@ -1,47 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from './auth/AuthProvider';
-import { AuthForm } from './auth/AuthForm';
-import { CharacterCreation } from './CharacterCreation';
-import { ReadingInterface } from './ReadingInterface';
-import { UserProfile } from './profile/UserProfile';
-import { useStore } from '../store/useStore';
-import { Sparkles } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useAuth } from './auth/AuthProvider.js';
+import { AuthForm } from './auth/AuthForm.js';
+import { CharacterCreation } from './CharacterCreation.js';
+import { ReadingInterface } from './ReadingInterface/index.js';
+import { UserProfile } from './profile/UserProfile.js';
+import { useStore } from '../store/useStore.js';
+import type { StoreState } from '../store/useStore.js';
 
-export function AppContent() {
+function AppRoutes() {
   const { loading, user } = useAuth();
-  const activeCharacter = useStore((state) => state.activeCharacter);
-  const [showProfile, setShowProfile] = useState(false);
-  const [showTeacherGuide, setShowTeacherGuide] = useState(false);
+  const activeCharacter = useStore((state: StoreState) => state.activeCharacter);
+  const navigate = useNavigate();
 
-  // Handle keyboard shortcuts
   useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      // Only handle shortcuts when we have an active character
-      if (!activeCharacter) return;
-
-      if (e.key === 'Escape') {
-        if (showProfile) {
-          setShowProfile(false);
-        } else if (showTeacherGuide) {
-          setShowTeacherGuide(false);
-        }
-      } else if (e.key === '?' || e.key === '/') {
-        // Prevent the '?' from being typed if we're not in an input
-        if (!(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) {
-          e.preventDefault();
-          setShowTeacherGuide(prev => !prev);
-        }
+    if (!loading) {
+      if (!user) {
+        navigate('/auth');
+      } else if (!activeCharacter) {
+        navigate('/create-character');
       }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [activeCharacter, showProfile, showTeacherGuide]);
-
-  const toggleTeacherGuide = () => {
-    console.log('Toggling teacher guide from:', showTeacherGuide);
-    setShowTeacherGuide(prev => !prev);
-  };
+    }
+  }, [loading, user, activeCharacter, navigate]);
 
   if (loading) {
     return (
@@ -51,23 +31,20 @@ export function AppContent() {
     );
   }
 
-  if (!user) {
-    return <AuthForm />;
-  }
-
-  if (showProfile) {
-    return <UserProfile onClose={() => setShowProfile(false)} />;
-  }
-
-  if (!activeCharacter) {
-    return <CharacterCreation />;
-  }
-
   return (
-    <ReadingInterface 
-      showTeacherGuide={showTeacherGuide}
-      onTeacherGuideClose={toggleTeacherGuide}
-      onShowProfile={() => setShowProfile(true)}
-    />
+    <Routes>
+      <Route path="/auth" element={<AuthForm />} />
+      <Route path="/create-character" element={<CharacterCreation />} />
+      <Route path="/profile" element={<UserProfile onClose={() => navigate('/')} />} />
+      <Route path="/" element={<ReadingInterface />} />
+    </Routes>
+  );
+}
+
+export function AppContent() {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }

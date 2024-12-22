@@ -1,6 +1,6 @@
-import { FRENCH_PHONEMES, FRENCH_SYLLABLE_RULES } from '../data/phonics/french';
-import { Phoneme } from '../data/phonics/types';
-import { PHONEME_TYPES, VOWEL_SOUNDS } from '../data/phonics/constants';
+import { FRENCH_PHONEMES, FRENCH_SYLLABLE_RULES } from '../data/phonics/french.js';
+import { Phoneme } from '../data/phonics/types.js';
+import { PHONEME_TYPES, VOWEL_SOUNDS } from '../data/phonics/constants.js';
 
 export function breakIntoPhonemes(word: string, isFrench: boolean = false): Phoneme[] {
   const phonemes: Phoneme[] = [];

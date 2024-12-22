@@ -1,29 +1,25 @@
-import { CharacterType } from './index';
+import { CharacterType } from './index.js';
+
+export interface WordData {
+  english: string;
+  translation: string;
+  phonemes: string[];
+  translationPhonemes: string[];
+  examples: string[];
+}
 
 export interface WordWithTranslation {
   english: string;
-  french: string;
+  translation: string;
   englishSyllables: string[];
-  frenchSyllables: string[];
+  translationSyllables: string[];
   pattern: string;
-}
-
-export interface Word {
-  english: string;
-  french: string;
-  pattern: string;
-  phonemes: Array<{ sound: string }>;
-  level: {
-    words: Word[];
-  };
+  characterType: CharacterType;
 }
 
 export interface WordFamily {
   pattern: string;
-  description: string;
-  words: Word[];
-  examples: string[];
-  teachingStrategy: string;
+  words: WordData[];
 }
 
 export interface LevelTheme {

@@ -1,30 +1,20 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import type { WordWithTranslation } from '../../types/word';
+import type { WordData, WordFamily } from '../../types/word.js';
+import type { CurriculumLevel } from '../../types/curriculum.js';
 
 interface Props {
-  currentWord: WordWithTranslation;
-  levelContent: {
-    level: number;
-    content: {
-      title: string;
-      description: string;
-      wordFamilies: Array<{
-        pattern: string;
-        words: string[];
-      }>;
-      teachingStrategies: string[];
-    };
-  };
+  currentWord: WordData | null;
+  levelData: CurriculumLevel;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Props) {
+export function TeacherPanel({ currentWord, levelData, isOpen, onClose }: Props) {
   if (!isOpen) return null;
 
   // Early return if data isn't loaded yet
-  if (!currentWord || !levelContent?.content?.wordFamilies) {
+  if (!currentWord || !levelData?.wordFamilies) {
     return (
       <div className="fixed inset-y-0 right-0 w-[800px] bg-white shadow-2xl 
                     flex flex-col overflow-hidden">
@@ -47,22 +37,26 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
     );
   }
 
-  // Group words by pattern from the level content
-  const wordsByPattern = levelContent.content.wordFamilies.reduce((acc: Record<string, string[]>, family) => {
-    if (family && family.pattern && family.words) {
-      acc[family.pattern] = family.words;
-    }
+  // Find the current word's family
+  const currentFamily = levelData.wordFamilies.find(family => 
+    family.words.some(w => w.english === currentWord.english)
+  );
+
+  // Group words by pattern
+  const wordsByPattern = levelData.wordFamilies.reduce((acc: Record<string, WordData[]>, family) => {
+    acc[family.pattern] = family.words;
     return acc;
   }, {});
 
   // Ensure current word's pattern is first
   const patterns = Object.keys(wordsByPattern);
-  const currentPattern = currentWord.pattern;
-  patterns.sort((a, b) => {
-    if (a === currentPattern) return -1;
-    if (b === currentPattern) return 1;
-    return 0;
-  });
+  if (currentFamily) {
+    patterns.sort((a, b) => {
+      if (a === currentFamily.pattern) return -1;
+      if (b === currentFamily.pattern) return 1;
+      return 0;
+    });
+  }
 
   return (
     <div className="fixed inset-y-0 right-0 w-[800px] bg-white shadow-2xl 
@@ -93,15 +87,15 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
                   {pattern} Pattern
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {wordsByPattern[pattern]?.map((w: string, i: number) => (
+                  {wordsByPattern[pattern]?.map((w: WordData, i: number) => (
                     <div
                       key={i}
                       className={`p-4 rounded-xl text-center font-reading text-2xl
-                                ${w === currentWord.english 
+                                ${w.english === currentWord.english 
                                   ? 'bg-blue-100 text-blue-700 font-bold' 
                                   : 'bg-gray-100 text-gray-700'}`}
                     >
-                      {w}
+                      {w.english}
                     </div>
                   ))}
                 </div>
@@ -126,9 +120,9 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
                   Break down "{currentWord.english}" into its sounds:
                 </p>
                 <div className="flex gap-2 font-reading text-base">
-                  {currentWord.englishSyllables?.map((syllable: string, i: number) => (
+                  {currentWord.phonemes.map((phoneme: string, i: number) => (
                     <span key={i} className="px-3 py-1 rounded bg-amber-100 text-amber-700">
-                      {syllable}
+                      {phoneme}
                     </span>
                   ))}
                 </div>
@@ -145,7 +139,7 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
                   2. Pattern Recognition
                 </h4>
                 <p className="text-amber-700 text-sm">
-                  The "{currentWord.pattern}" pattern appears in many words. Help your child:
+                  The "{currentFamily?.pattern}" pattern appears in many words. Help your child:
                 </p>
                 <ul className="list-disc list-inside text-amber-700 space-y-1 pl-2 text-sm">
                   <li>Look for this pattern in other words they know</li>
@@ -155,10 +149,24 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
                 </ul>
               </div>
 
+              {/* Examples */}
+              {currentWord.examples.length > 0 && (
+                <div className="space-y-2">
+                  <h4 className="font-heading font-semibold text-amber-800 text-sm">
+                    3. Example Sentences
+                  </h4>
+                  <ul className="list-disc list-inside text-amber-700 space-y-1 pl-2 text-sm">
+                    {currentWord.examples.map((example, i) => (
+                      <li key={i}>{example}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* Multi-Sensory Learning */}
               <div className="space-y-2">
                 <h4 className="font-heading font-semibold text-amber-800 text-sm">
-                  3. Multi-Sensory Activities
+                  4. Multi-Sensory Activities
                 </h4>
                 <ul className="list-disc list-inside text-amber-700 space-y-1 pl-2 text-sm">
                   <li>Write the word in the air while saying it</li>
@@ -171,7 +179,7 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
               {/* Troubleshooting */}
               <div className="space-y-2">
                 <h4 className="font-heading font-semibold text-amber-800 text-sm">
-                  4. If Your Child is Struggling
+                  5. If Your Child is Struggling
                 </h4>
                 <ul className="list-disc list-inside text-amber-700 space-y-1 pl-2 text-sm">
                   <li>Break the word into smaller chunks</li>
@@ -179,19 +187,6 @@ export function TeacherPanel({ currentWord, levelContent, isOpen, onClose }: Pro
                   <li>Use rhythm or clapping to emphasize syllables</li>
                   <li>Take breaks if needed - learning should be fun!</li>
                   <li>Celebrate small victories along the way</li>
-                </ul>
-              </div>
-
-              {/* Encouragement */}
-              <div className="space-y-2">
-                <h4 className="font-heading font-semibold text-amber-800 text-sm">
-                  5. Positive Reinforcement
-                </h4>
-                <ul className="list-disc list-inside text-amber-700 space-y-1 pl-2 text-sm">
-                  <li>Praise effort and progress, not just correct answers</li>
-                  <li>Use specific praise: "Great job sounding out that tricky part!"</li>
-                  <li>Keep the learning environment relaxed and supportive</li>
-                  <li>Let your child be the teacher sometimes</li>
                 </ul>
               </div>
             </div>

@@ -1,21 +1,32 @@
-import { level1 } from './level1';
-import { level2 } from './level2';
-import { level3 } from './level3';
-import { level4 } from './level4';
-import type { CurriculumLevel } from '../../types/curriculum';
+import type { CurriculumLevel } from '../../types/curriculum.js';
+import type { WordFamily } from '../../types/word.js';
 
-export const curriculum: CurriculumLevel[] = [
-  level1,
-  level2,
-  level3,
-  level4
-];
+export async function getCurrentLevelContent(level: number): Promise<CurriculumLevel> {
+  try {
+    const response = await fetch(`/src/data/wordsets/default/levels/level${level}.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to load level ${level}`);
+    }
+    const data = await response.json();
+    return {
+      level,
+      title: `Level ${level}`,
+      description: `Practice reading words from level ${level}`,
+      wordFamilies: data.wordFamilies,
+      teachingStrategies: [
+        'Start with individual letter sounds',
+        'Practice blending sounds together',
+        'Use visual aids and hand motions',
+        'Make connections to familiar objects'
+      ]
+    };
+  } catch (error) {
+    console.error('Error loading level:', error);
+    throw error;
+  }
+}
 
-export const getCurrentLevelContent = (level: number): CurriculumLevel => {
-  return curriculum.find(l => l.level === level) || level1;
-};
-
-export const getWordFamilyByPattern = (level: number, pattern: string) => {
-  const levelContent = getCurrentLevelContent(level);
-  return levelContent.content.wordFamilies.find(family => family.pattern === pattern);
-};
+export async function getWordFamilyByPattern(level: number, pattern: string): Promise<WordFamily | undefined> {
+  const levelContent = await getCurrentLevelContent(level);
+  return levelContent.wordFamilies.find(family => family.pattern === pattern);
+}

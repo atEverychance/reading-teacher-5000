@@ -1,0 +1,42 @@
+{
+  "wordFamilies": [
+    {
+      "pattern": "-at",
+      "words": [
+        {
+          "english": "cat",
+          "translation": "chat",
+          "phonemes": ["c", "a", "t"],
+          "translationPhonemes": ["ch", "at"],
+          "examples": ["The cat in the hat", "A rat on the mat"]
+        },
+        {
+          "english": "hat",
+          "translation": "chapeau",
+          "phonemes": ["h", "a", "t"],
+          "translationPhonemes": ["cha", "peau"],
+          "examples": ["The cat in the hat", "A rat on the mat"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ig/-in",
+      "words": [
+        {
+          "english": "pig",
+          "translation": "cochon",
+          "phonemes": ["p", "i", "g"],
+          "translationPhonemes": ["co", "chon"],
+          "examples": ["The big pig", "I can win"]
+        },
+        {
+          "english": "big",
+          "translation": "grand",
+          "phonemes": ["b", "i", "g"],
+          "translationPhonemes": ["gr", "and"],
+          "examples": ["The big pig", "I can win"]
+        }
+      ]
+    }
+  ]
+}

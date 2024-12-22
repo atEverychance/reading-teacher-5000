@@ -1,0 +1,330 @@
+{
+  "wordFamilies": [
+    {
+      "pattern": "-at",
+      "words": [
+        {
+          "english": "cat",
+          "translation": "chat",
+          "phonemes": [
+            "c",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "ch",
+            "at"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        },
+        {
+          "english": "hat",
+          "translation": "chapeau",
+          "phonemes": [
+            "h",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "cha",
+            "peau"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        },
+        {
+          "english": "rat",
+          "translation": "rat",
+          "phonemes": [
+            "r",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "r",
+            "at"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        },
+        {
+          "english": "mat",
+          "translation": "tapis",
+          "phonemes": [
+            "m",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "ta",
+            "pis"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        },
+        {
+          "english": "pat",
+          "translation": "tapoter",
+          "phonemes": [
+            "p",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "ta",
+            "po",
+            "ter"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        },
+        {
+          "english": "sat",
+          "translation": "assis",
+          "phonemes": [
+            "s",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "a",
+            "ssis"
+          ],
+          "examples": [
+            "The cat in the hat",
+            "A rat on the mat"
+          ]
+        }
+      ]
+    },
+    {
+      "pattern": "-ig/-in",
+      "words": [
+        {
+          "english": "pig",
+          "translation": "cochon",
+          "phonemes": [
+            "p",
+            "i",
+            "g"
+          ],
+          "translationPhonemes": [
+            "co",
+            "chon"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        },
+        {
+          "english": "big",
+          "translation": "grand",
+          "phonemes": [
+            "b",
+            "i",
+            "g"
+          ],
+          "translationPhonemes": [
+            "gr",
+            "and"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        },
+        {
+          "english": "dig",
+          "translation": "creuser",
+          "phonemes": [
+            "d",
+            "i",
+            "g"
+          ],
+          "translationPhonemes": [
+            "creu",
+            "ser"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        },
+        {
+          "english": "pin",
+          "translation": "épingle",
+          "phonemes": [
+            "p",
+            "i",
+            "n"
+          ],
+          "translationPhonemes": [
+            "é",
+            "pin",
+            "gle"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        },
+        {
+          "english": "win",
+          "translation": "gagner",
+          "phonemes": [
+            "w",
+            "i",
+            "n"
+          ],
+          "translationPhonemes": [
+            "ga",
+            "gner"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        },
+        {
+          "english": "tin",
+          "translation": "étain",
+          "phonemes": [
+            "t",
+            "i",
+            "n"
+          ],
+          "translationPhonemes": [
+            "é",
+            "tain"
+          ],
+          "examples": [
+            "The big pig",
+            "I can win"
+          ]
+        }
+      ]
+    },
+    {
+      "pattern": "short a",
+      "words": [
+        {
+          "english": "cat",
+          "translation": "chat",
+          "phonemes": [
+            "c",
+            "a",
+            "t"
+          ],
+          "translationPhonemes": [
+            "ch",
+            "at"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        },
+        {
+          "english": "map",
+          "translation": "carte",
+          "phonemes": [
+            "m",
+            "a",
+            "p"
+          ],
+          "translationPhonemes": [
+            "car",
+            "te"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        },
+        {
+          "english": "tap",
+          "translation": "robinet",
+          "phonemes": [
+            "t",
+            "a",
+            "p"
+          ],
+          "translationPhonemes": [
+            "ro",
+            "bi",
+            "net"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        },
+        {
+          "english": "bag",
+          "translation": "sac",
+          "phonemes": [
+            "b",
+            "a",
+            "g"
+          ],
+          "translationPhonemes": [
+            "s",
+            "ac"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        },
+        {
+          "english": "fan",
+          "translation": "ventilateur",
+          "phonemes": [
+            "f",
+            "a",
+            "n"
+          ],
+          "translationPhonemes": [
+            "ven",
+            "ti",
+            "la",
+            "teur"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        },
+        {
+          "english": "pan",
+          "translation": "poêle",
+          "phonemes": [
+            "p",
+            "a",
+            "n"
+          ],
+          "translationPhonemes": [
+            "poê",
+            "le"
+          ],
+          "examples": [
+            "The cat has a map",
+            "Tap on the pan"
+          ]
+        }
+      ]
+    }
+  ]
+}

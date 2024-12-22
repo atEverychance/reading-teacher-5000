@@ -1,6 +1,6 @@
-import { supabase } from './supabase';
-import type { Character } from '../types';
-import type { Database } from '../types/supabase';
+import { supabase } from './supabase.js';
+import type { Character } from '../types/index.js';
+import type { Database } from '../types/supabase.js';
 
 type CharacterInsert = Database['public']['Tables']['characters']['Insert'];
 

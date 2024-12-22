@@ -1,0 +1,194 @@
+{
+  "wordFamilies": [
+    {
+      "pattern": "-atch",
+      "words": [
+        {
+          "english": "catch",
+          "translation": "attraper",
+          "phonemes": ["k", "a", "tch"],
+          "translationPhonemes": ["a", "t", "t", "r", "a", "p", "e", "r"],
+          "examples": ["Catch the wave like Moana!", "Can you catch a falling star?"]
+        },
+        {
+          "english": "match",
+          "translation": "correspondre",
+          "phonemes": ["m", "a", "tch"],
+          "translationPhonemes": ["c", "o", "r", "r", "e", "s", "p", "o", "n", "d", "r", "e"],
+          "examples": ["Match the colors of the rainbow!", "A perfect match for my outfit!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eak",
+      "words": [
+        {
+          "english": "sneak",
+          "translation": "se faufiler",
+          "phonemes": ["s", "n", "e", "a", "k"],
+          "translationPhonemes": ["s", "e", "f", "o", "f", "i", "l", "e", "r"],
+          "examples": ["Sneak past the sleeping dragon!", "Can you sneak a cookie from the jar?"]
+        },
+        {
+          "english": "speak",
+          "translation": "parler",
+          "phonemes": ["s", "p", "e", "a", "k"],
+          "translationPhonemes": ["p", "a", "r", "l", "e", "r"],
+          "examples": ["Speak your mind!", "Can you speak like a pirate?"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eet",
+      "words": [
+        {
+          "english": "meet",
+          "translation": "rencontrer",
+          "phonemes": ["m", "ee", "t"],
+          "translationPhonemes": ["r", "e", "n", "c", "o", "n", "t", "r", "e"],
+          "examples": ["Let's meet at the castle!", "Meet new friends in the kingdom!"]
+        },
+        {
+          "english": "sheet",
+          "translation": "feuille",
+          "phonemes": ["sh", "ee", "t"],
+          "translationPhonemes": ["f", "e", "u", "i", "l", "l", "e"],
+          "examples": ["A sheet of paper for drawing!", "The bed needs a clean sheet!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eal",
+      "words": [
+        {
+          "english": "seal",
+          "translation": "phoque",
+          "phonemes": ["s", "e", "a", "l"],
+          "translationPhonemes": ["p", "h", "o", "q", "u", "e"],
+          "examples": ["A seal at the zoo!", "Can you seal the envelope?"]
+        },
+        {
+          "english": "meal",
+          "translation": "repas",
+          "phonemes": ["m", "e", "a", "l"],
+          "translationPhonemes": ["r", "e", "p", "a"],
+          "examples": ["A delicious meal for dinner!", "Let's prepare a meal together!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-eck",
+      "words": [
+        {
+          "english": "check",
+          "translation": "vérifier",
+          "phonemes": ["ch", "e", "c", "k"],
+          "translationPhonemes": ["v", "e", "r", "i", "f", "i", "e", "r"],
+          "examples": ["Check the treasure map!", "Can you check if the door is locked?"]
+        },
+        {
+          "english": "neck",
+          "translation": "cou",
+          "phonemes": ["n", "e", "c", "k"],
+          "translationPhonemes": ["c", "o", "u"],
+          "examples": ["A beautiful necklace for Elsa!", "Look at the duck's long neck!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ock",
+      "words": [
+        {
+          "english": "rock",
+          "translation": "roche",
+          "phonemes": ["r", "o", "ck"],
+          "translationPhonemes": ["r", "o", "c", "h", "e"],
+          "examples": ["A big rock in the ocean!", "Find a rock for your collection!"]
+        },
+        {
+          "english": "clock",
+          "translation": "horloge",
+          "phonemes": ["c", "l", "o", "ck"],
+          "translationPhonemes": ["h", "o", "r", "l", "o", "g", "e"],
+          "examples": ["The clock strikes midnight!", "A magical clock in the castle!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ind",
+      "words": [
+        {
+          "english": "kind",
+          "translation": "gentil",
+          "phonemes": ["k", "i", "nd"],
+          "translationPhonemes": ["g", "e", "n", "t", "i", "l"],
+          "examples": ["Be kind to everyone you meet!", "A kind heart can change the world!"]
+        },
+        {
+          "english": "find",
+          "translation": "trouver",
+          "phonemes": ["f", "i", "nd"],
+          "translationPhonemes": ["t", "r", "o", "u", "v", "e", "r"],
+          "examples": ["Find the hidden treasure!", "Can you find your way home?"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ice",
+      "words": [
+        {
+          "english": "slice",
+          "translation": "tranche",
+          "phonemes": ["s", "l", "i", "c", "e"],
+          "translationPhonemes": ["t", "r", "a", "n", "c", "h", "e"],
+          "examples": ["Slice the cake for the party!", "A slice of adventure awaits!"]
+        },
+        {
+          "english": "dice",
+          "translation": "dé",
+          "phonemes": ["d", "i", "c", "e"],
+          "translationPhonemes": ["d", "é"],
+          "examples": ["Roll the dice for fun!", "A game of dice with friends!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ice",
+      "words": [
+        {
+          "english": "mice",
+          "translation": "souris",
+          "phonemes": ["m", "a", "i", "c", "e"],
+          "translationPhonemes": ["s", "o", "u", "r", "i", "s"],
+          "examples": ["Mice in the house!", "Watch the little mice play!"]
+        },
+        {
+          "english": "spice",
+          "translation": "épice",
+          "phonemes": ["s", "p", "i", "c", "e"],
+          "translationPhonemes": ["é", "p", "i", "c", "e"],
+          "examples": ["Add some spice to your dish!", "A pinch of spice makes it nice!"]
+        }
+      ]
+    },
+    {
+      "pattern": "-ock",
+      "words": [
+        {
+          "english": "rock",
+          "translation": "roche",
+          "phonemes": ["r", "o", "ck"],
+          "translationPhonemes": ["r", "o", "c", "h", "e"],
+          "examples": ["A big rock in the ocean!", "Find a rock for your collection!"]
+        },
+        {
+          "english": "dock",
+          "translation": "quai",
+          "phonemes": ["d", "o", "ck"],
+          "translationPhonemes": ["q", "u", "a", "i"],
+          "examples": ["Park the boat at the dock!", "The dock is busy with boats!"]
+        }
+      ]
+    }
+  ]
+}

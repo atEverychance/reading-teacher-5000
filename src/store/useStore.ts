@@ -1,17 +1,19 @@
 import { create } from 'zustand';
-import { supabase } from '../lib/supabase';
-import type { Character } from '../types';
+import { supabase } from '../lib/supabase.js';
+import type { Character } from '../types/index.js';
 
 // Get the stored active character ID from local storage
 const storedActiveCharacterId = localStorage.getItem('activeCharacterId');
 
-interface StoreState {
+export interface StoreState {
   characters: Character[];
   activeCharacter: Character | null;
   setCharacters: (characters: Character[] | ((prev: Character[]) => Character[])) => void;
   setActiveCharacter: (character: Character | null) => void;
   addCharacter: (character: Character) => void;
   updateCharacterProgress: (progress: number) => void;
+  level: number;
+  setLevel: (level: number) => void;
 }
 
 // Load initial active character from localStorage
@@ -96,4 +98,6 @@ export const useStore = create<StoreState>((set, get) => ({
       }));
     }
   },
+  level: 1,
+  setLevel: (level) => set({ level }),
 }));

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "name": "Reading Teacher 5000 - Core Word Set",
+    "description": "A progressive phonics-based curriculum for early readers",
+    "version": "1.0.0",
+    "language": "english",
+    "targetAge": {
+      "min": 4,
+      "max": 8
+    },
+    "levels": [
+      {
+        "id": 1,
+        "title": "CVC Words & Word Families",
+        "description": "Introduction to basic word patterns through fairy tales"
+      }
+    ]
+  },
+  "teaching": {
+    "strategies": {
+      "level1": [
+        "Use sound tapping for each phoneme",
+        "Create word family charts",
+        "Practice with rhyming pairs",
+        "Use manipulatives for letter sounds"
+      ]
+    },
+    "assessmentCriteria": {
+      "level1": [
+        "Can identify and read CVC words",
+        "Recognizes common word families",
+        "Demonstrates understanding of short vowel sounds",
+        "Can blend sounds to form words"
+      ]
+    }
+  },
+  "levels": {
+    "level1": {
+      "wordFamilies": [
+        {
+          "pattern": "-at",
+          "words": [
+            {
+              "english": "cat",
+              "translation": "chat",
+              "phonemes": ["c", "a", "t"],
+              "translationPhonemes": ["ch", "at"],
+              "examples": ["The cat in the hat", "A rat on the mat"]
+            },
+            {
+              "english": "hat",
+              "translation": "chapeau",
+              "phonemes": ["h", "a", "t"],
+              "translationPhonemes": ["cha", "peau"],
+              "examples": ["The cat in the hat", "A rat on the mat"]
+            }
+          ]
+        },
+        {
+          "pattern": "-ig/-in",
+          "words": [
+            {
+              "english": "pig",
+              "translation": "cochon",
+              "phonemes": ["p", "i", "g"],
+              "translationPhonemes": ["co", "chon"],
+              "examples": ["The big pig", "I can win"]
+            },
+            {
+              "english": "big",
+              "translation": "grand",
+              "phonemes": ["b", "i", "g"],
+              "translationPhonemes": ["gr", "and"],
+              "examples": ["The big pig", "I can win"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
