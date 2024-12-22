@@ -1,264 +1,260 @@
 {
-  "vowels": {
-    "short": {
-      "a": {
-        "sound": "ah",
-        "examples": ["cat", "hat", "mat"],
-        "description": "Short 'a' as in 'cat'",
-        "ipa": "æ"
-      },
-      "e": {
-        "sound": "eh",
-        "examples": ["bed", "red", "pet"],
-        "description": "Short 'e' as in 'bed'",
-        "ipa": "ɛ"
-      },
-      "i": {
-        "sound": "ih",
-        "examples": ["sit", "big", "pig"],
-        "description": "Short 'i' as in 'sit'",
-        "ipa": "ɪ"
-      },
-      "o": {
-        "sound": "oh",
-        "examples": ["hot", "pot", "lot"],
-        "description": "Short 'o' as in 'hot'",
-        "ipa": "ɒ"
-      },
-      "u": {
-        "sound": "uh",
-        "examples": ["cup", "pup", "sun"],
-        "description": "Short 'u' as in 'cup'",
-        "ipa": "ʌ"
-      }
-    },
-    "long": {
-      "ay": {
-        "sound": "ay",
-        "examples": ["say", "day", "way"],
-        "description": "Long 'a' as in 'say'",
-        "ipa": "eɪ"
-      },
-      "ee": {
-        "sound": "ee",
-        "examples": ["see", "tree", "bee"],
-        "description": "Long 'e' as in 'see'",
-        "ipa": "iː"
-      },
-      "ie": {
-        "sound": "ai",
-        "examples": ["pie", "tie", "lie"],
-        "description": "Long 'i' as in 'pie'",
-        "ipa": "aɪ"
-      },
-      "oa": {
-        "sound": "oh",
-        "examples": ["boat", "coat", "goat"],
-        "description": "Long 'o' as in 'boat'",
-        "ipa": "oʊ"
-      },
-      "oo": {
-        "sound": "oo",
-        "examples": ["moon", "soon", "food"],
-        "description": "Long 'oo' as in 'moon'",
-        "ipa": "uː"
-      }
-    }
-  },
   "consonants": {
-    "stops": {
-      "b": {
-        "sound": "buh",
-        "examples": ["bat", "big", "bug"],
-        "description": "Voiced bilabial stop",
-        "ipa": "b"
+    "plosive": {
+      "voiceless": {
+        "p": {
+          "sound": "p",
+          "examples": ["pat", "pin", "pup"],
+          "description": "Voiceless bilabial plosive",
+          "ipa": "p"
+        },
+        "t": {
+          "sound": "t",
+          "examples": ["tap", "tot", "tut"],
+          "description": "Voiceless alveolar plosive",
+          "ipa": "t"
+        },
+        "k": {
+          "sound": "k",
+          "examples": ["cat", "kit", "knot"],
+          "description": "Voiceless velar plosive",
+          "ipa": "k"
+        }
       },
-      "d": {
-        "sound": "duh",
-        "examples": ["dog", "dig", "dad"],
-        "description": "Voiced alveolar stop",
-        "ipa": "d"
-      },
-      "k": {
-        "sound": "kuh",
-        "examples": ["cat", "kid", "kite"],
-        "description": "Voiceless velar stop",
-        "ipa": "k"
-      },
-      "p": {
-        "sound": "puh",
-        "examples": ["pat", "pig", "pen"],
-        "description": "Voiceless bilabial stop",
-        "ipa": "p"
-      },
-      "t": {
-        "sound": "tuh",
-        "examples": ["tap", "top", "ten"],
-        "description": "Voiceless alveolar stop",
-        "ipa": "t"
+      "voiced": {
+        "b": {
+          "sound": "b",
+          "examples": ["bat", "bib", "bob"],
+          "description": "Voiced bilabial plosive",
+          "ipa": "b"
+        },
+        "d": {
+          "sound": "d",
+          "examples": ["dot", "did", "dud"],
+          "description": "Voiced alveolar plosive",
+          "ipa": "d"
+        },
+        "g": {
+          "sound": "g",
+          "examples": ["got", "git", "gag"],
+          "description": "Voiced velar plosive",
+          "ipa": "g"
+        }
       }
     },
-    "fricatives": {
-      "f": {
-        "sound": "fuh",
-        "examples": ["fat", "fun", "fish"],
-        "description": "Voiceless labiodental fricative",
-        "ipa": "f"
+    "fricative": {
+      "voiceless": {
+        "f": {
+          "sound": "f",
+          "examples": ["fit", "fox", "fog"],
+          "description": "Voiceless labiodental fricative",
+          "ipa": "f"
+        },
+        "s": {
+          "sound": "s",
+          "examples": ["sit", "sat", "sum"],
+          "description": "Voiceless alveolar fricative",
+          "ipa": "s"
+        },
+        "h": {
+          "sound": "h",
+          "examples": ["hat", "him", "hit"],
+          "description": "Voiceless glottal fricative",
+          "ipa": "h"
+        }
       },
-      "s": {
-        "sound": "sss",
-        "examples": ["sat", "sun", "see"],
-        "description": "Voiceless alveolar fricative",
-        "ipa": "s"
-      },
-      "v": {
-        "sound": "vuh",
-        "examples": ["van", "vet", "vine"],
-        "description": "Voiced labiodental fricative",
-        "ipa": "v"
-      },
-      "z": {
-        "sound": "zzz",
-        "examples": ["zoo", "zip", "buzz"],
-        "description": "Voiced alveolar fricative",
-        "ipa": "z"
+      "voiced": {
+        "v": {
+          "sound": "v",
+          "examples": ["vet", "vib", "vow"],
+          "description": "Voiced labiodental fricative",
+          "ipa": "v"
+        },
+        "z": {
+          "sound": "z",
+          "examples": ["zoo", "zip", "zest"],
+          "description": "Voiced alveolar fricative",
+          "ipa": "z"
+        },
+        "zh": {
+          "sound": "zh",
+          "examples": ["treasure", "measure", "treasure"],
+          "description": "Voiced postalveolar fricative",
+          "ipa": "ʒ"
+        }
       }
     },
-    "nasals": {
+    "nasal": {
       "m": {
-        "sound": "mmm",
-        "examples": ["mat", "mom", "map"],
+        "sound": "m",
+        "examples": ["mat", "met", "mom"],
         "description": "Bilabial nasal",
         "ipa": "m"
       },
       "n": {
-        "sound": "nnn",
-        "examples": ["net", "nap", "nut"],
+        "sound": "n",
+        "examples": ["nut", "net", "note"],
         "description": "Alveolar nasal",
         "ipa": "n"
+      },
+      "ŋ": {
+        "sound": "ng",
+        "examples": ["sing", "song", "long"],
+        "description": "Velar nasal",
+        "ipa": "ŋ"
       }
     },
-    "approximants": {
+    "liquid": {
       "l": {
-        "sound": "lll",
-        "examples": ["let", "lip", "log"],
-        "description": "Lateral approximant",
+        "sound": "l",
+        "examples": ["lot", "lap", "love"],
+        "description": "Alveolar lateral approximant",
         "ipa": "l"
       },
       "r": {
-        "sound": "rrr",
+        "sound": "r",
         "examples": ["rat", "red", "run"],
-        "description": "Alveolar approximant",
-        "ipa": "ɹ"
-      },
+        "description": "Alveolar trill",
+        "ipa": "r"
+      }
+    },
+    "approximant": {
       "w": {
-        "sound": "wuh",
-        "examples": ["wet", "win", "way"],
-        "description": "Labial-velar approximant",
+        "sound": "w",
+        "examples": ["wet", "wit", "won"],
+        "description": "Labiovelar approximant",
         "ipa": "w"
       },
-      "y": {
-        "sound": "yuh",
-        "examples": ["yes", "yam", "you"],
+      "j": {
+        "sound": "y",
+        "examples": ["yes", "yell", "yogurt"],
         "description": "Palatal approximant",
         "ipa": "j"
       }
     }
   },
-  "blends": {
-    "initial": {
-      "bl": {
-        "sound": "bluh",
-        "examples": ["blue", "black", "blow"],
-        "description": "Initial bl blend",
-        "components": ["b", "l"]
+  "vowels": {
+    "monophthong": {
+      "i": {
+        "sound": "i",
+        "examples": ["hit", "kit", "hit"],
+        "description": "Close front unrounded vowel",
+        "ipa": "i"
       },
-      "br": {
-        "sound": "bruh",
-        "examples": ["brown", "bread", "bring"],
-        "description": "Initial br blend",
-        "components": ["b", "r"]
+      "e": {
+        "sound": "e",
+        "examples": ["bet", "pet", "bet"],
+        "description": "Close-mid front unrounded vowel",
+        "ipa": "e"
       },
-      "cl": {
-        "sound": "cluh",
-        "examples": ["clap", "clip", "clock"],
-        "description": "Initial cl blend",
-        "components": ["k", "l"]
+      "a": {
+        "sound": "a",
+        "examples": ["hat", "car", "hat"],
+        "description": "Open front unrounded vowel",
+        "ipa": "a"
       },
-      "cr": {
-        "sound": "cruh",
-        "examples": ["crab", "cry", "crown"],
-        "description": "Initial cr blend",
-        "components": ["k", "r"]
+      "o": {
+        "sound": "o",
+        "examples": ["hot", "go", "hot"],
+        "description": "Close back rounded vowel",
+        "ipa": "o"
+      },
+      "u": {
+        "sound": "u",
+        "examples": ["put", "cut", "put"],
+        "description": "Close back rounded vowel",
+        "ipa": "u"
       }
     },
-    "final": {
-      "nd": {
-        "sound": "nd",
-        "examples": ["and", "hand", "send"],
-        "description": "Final nd blend",
-        "components": ["n", "d"]
+    "diphthong": {
+      "ai": {
+        "sound": "ai",
+        "examples": ["buy", "bay", "boil"],
+        "description": "Diphthong /ai/",
+        "ipa": "ai"
       },
-      "nt": {
-        "sound": "nt",
-        "examples": ["ant", "tent", "went"],
-        "description": "Final nt blend",
-        "components": ["n", "t"]
+      "au": {
+        "sound": "au",
+        "examples": ["cow", "how", "out"],
+        "description": "Diphthong /au/",
+        "ipa": "au"
       },
-      "st": {
-        "sound": "st",
-        "examples": ["best", "last", "nest"],
-        "description": "Final st blend",
-        "components": ["s", "t"]
+      "oi": {
+        "sound": "oi",
+        "examples": ["boil", "coin", "foil"],
+        "description": "Diphthong /oi/",
+        "ipa": "oi"
       }
     }
   },
-  "digraphs": {
-    "consonant": {
-      "ch": {
-        "sound": "ch",
-        "examples": ["chip", "chat", "chin"],
-        "description": "Voiceless palato-alveolar affricate",
-        "ipa": "tʃ"
-      },
-      "sh": {
-        "sound": "sh",
-        "examples": ["ship", "shop", "shut"],
-        "description": "Voiceless palato-alveolar fricative",
-        "ipa": "ʃ"
-      },
-      "th": {
-        "sound": "th",
-        "examples": ["thin", "thick", "thumb"],
-        "description": "Voiceless dental fricative",
-        "ipa": "θ"
-      },
-      "wh": {
-        "sound": "wh",
-        "examples": ["what", "when", "why"],
-        "description": "Voiceless labial-velar approximant",
-        "ipa": "ʍ"
-      }
+  "consonant blends": {
+    "sp": {
+      "sound": "sp",
+      "examples": ["spin", "spot", "splash"],
+      "description": "Voiceless alveolar stop + voiceless labiodental fricative",
+      "ipa": "sp"
     },
-    "vowel": {
-      "ai": {
-        "sound": "ay",
-        "examples": ["rain", "pain", "tail"],
-        "description": "Long a digraph",
-        "ipa": "eɪ"
-      },
-      "ea": {
-        "sound": "ee",
-        "examples": ["eat", "read", "team"],
-        "description": "Long e digraph",
-        "ipa": "iː"
-      },
-      "oa": {
-        "sound": "oh",
-        "examples": ["boat", "coat", "road"],
-        "description": "Long o digraph",
-        "ipa": "oʊ"
-      }
+    "tr": {
+      "sound": "tr",
+      "examples": ["trip", "trap", "tree"],
+      "description": "Voiceless alveolar stop + voiceless alveolar fricative",
+      "ipa": "tr"
+    },
+    "fl": {
+      "sound": "fl",
+      "examples": ["flip", "flop", "flick"],
+      "description": "Voiceless labiodental fricative + liquid",
+      "ipa": "fl"
+    }
+  },
+  "digraphs": {
+    "ph": {
+      "sound": "ph",
+      "examples": ["phone", "philosophy", "phenomenon"],
+      "description": "Voiceless labiodental fricative + voiceless pharyngeal fricative",
+      "ipa": "ph"
+    },
+    "ng": {
+      "sound": "ng",
+      "examples": ["sing", "song", "long"],
+      "description": "Velar nasal + velar stop",
+      "ipa": "ŋ"
+    }
+  },
+  "triple consonant blends": {
+    "spr": {
+      "sound": "spr",
+      "examples": ["spray", "spring", "spring"],
+      "description": "Voiceless alveolar stop + voiceless alveolar fricative + voiceless alveolar stop",
+      "ipa": "spr"
+    },
+    "str": {
+      "sound": "str",
+      "examples": ["strip", "stretch", "stream"],
+      "description": "Voiceless alveolar stop + voiceless alveolar fricative + voiceless alveolar stop",
+      "ipa": "str"
+    }
+  },
+  "schwa sounds": {
+    "ə": {
+      "sound": "ə",
+      "examples": ["the", "a", "to"],
+      "description": "Central unrounded vowel",
+      "ipa": "ə"
+    }
+  },
+  "silent letters": {
+    "k": {
+      "sound": "silent",
+      "examples": ["knead", "knot", "knot"],
+      "description": "Silent voiceless velar stop",
+      "ipa": "silent"
+    },
+    "g": {
+      "sound": "silent",
+      "examples": ["gnat", "gnome", "gnom"],
+      "description": "Silent voiced velar stop",
+      "ipa": "silent"
     }
   }
 }
