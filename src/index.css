@@ -1,0 +1,35 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Classes */
+.font-heading {
+  font-family: 'Baloo 2', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Quicksand', system-ui, sans-serif;
+}
+
+.font-reading {
+  font-family: 'Andika', system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}

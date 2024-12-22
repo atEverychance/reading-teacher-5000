@@ -1,0 +1,14 @@
+/* Character-specific styles */
+.theme-unicorn {
+  --primary-color: theme('colors.purple.400');
+  --secondary-color: theme('colors.pink.400');
+  --background-start: theme('colors.purple.950');
+  --background-end: theme('colors.pink.950');
+}
+
+.theme-mermaid {
+  --primary-color: theme('colors.cyan.400');
+  --secondary-color: theme('colors.blue.400');
+  --background-start: theme('colors.cyan.950');
+  --background-end: theme('colors.blue.950');
+}

@@ -1,0 +1,39 @@
+{
+  "introduction": {
+    "title": "Welcome to the Reading Adventure!",
+    "description": "This guide will help you support young readers in their learning journey."
+  },
+  "wordPatterns": {
+    "cvc": {
+      "title": "CVC Words",
+      "description": "Consonant-Vowel-Consonant patterns",
+      "examples": ["cat", "dog", "pig"],
+      "tips": [
+        "Sound out each letter slowly",
+        "Blend the sounds together",
+        "Use hand motions for each sound"
+      ]
+    },
+    "sight": {
+      "title": "Sight Words",
+      "description": "Common words to memorize",
+      "examples": ["the", "and", "is"],
+      "tips": [
+        "Practice frequent exposure",
+        "Use in simple sentences",
+        "Create word walls"
+      ]
+    }
+  },
+  "teachingStrategies": [
+    "Use positive reinforcement",
+    "Allow time for practice",
+    "Make it fun and engaging",
+    "Celebrate progress"
+  ],
+  "troubleshooting": {
+    "hesitation": "If the child hesitates, give them time to sound it out",
+    "mistakes": "Mistakes are learning opportunities - stay positive",
+    "frustration": "Take breaks when needed and return with fresh energy"
+  }
+}
