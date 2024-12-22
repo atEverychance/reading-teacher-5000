@@ -1,70 +1,120 @@
+Here is the enhanced and expanded English phonetics JSON data file:
+
+```
 {
+  "Vowels": {
+    "Monophthongs": {
+      "i": {
+        "sound": "representation": "short, close front unrounded",
+        "examples": ["hit", "kit", "bid"],
+        "description": "a short, close front unrounded vowel",
+        "ipa": "ɪ"
+      },
+      "e": {
+        "sound": "representation": "short, mid front open",
+        "examples": ["pet", "set", "bet"],
+        "description": "a short, mid front open vowel",
+        "ipa": "ɛ"
+      },
+      "ɑ": {
+        "sound": "representation": "open back unrounded",
+        "examples": ["car", "far", "bar"],
+        "description": "an open back unrounded vowel",
+        "ipa": "ɑ"
+      },
+      "u": {
+        "sound": "representation": "short, close back rounded",
+        "examples": ["put", "cut", "but"],
+        "description": "a short, close back rounded vowel",
+        "ipa": "ʊ"
+      }
+    },
+    "Diphthongs": {
+      "ai": {
+        "sound": "representation": "combination of /aɪ/ and /ɑɪ/",
+        "examples": ["buy", "play", "say"],
+        "description": "a combination of /aɪ/ and /ɑɪ/",
+        "ipa": "aɪ"
+      },
+      "au": {
+        "sound": "representation": "combination of /aʊ/ and /ɔʊ/",
+        "examples": ["how", "cow", "bow"],
+        "description": "a combination of /aʊ/ and /ɔʊ/",
+        "ipa": "aʊ"
+      }
+    }
+  },
   "Consonants": {
-    "Plosives": {
-      "P": {
-        "sound": "/p/",
+    "Stops": {
+      "p": {
+        "sound": "representation": "voiceless bilabial stop",
         "examples": ["pat", "pet", "pup"],
-        "description": "voiceless bilabial stop",
+        "description": "a voiceless bilabial stop",
         "ipa": "p"
       },
-      "T": {
-        "sound": "/t/",
-        "examples": ["tap", "tot", "tut"],
-        "description": "voiceless alveolar stop",
+      "t": {
+        "sound": "representation": "voiceless alveolar stop",
+        "examples": ["tap", "tot", "top"],
+        "description": "a voiceless alveolar stop",
         "ipa": "t"
+      }
+    },
+    "Fricatives": {
+      "s": {
+        "sound": "representation": "voiceless alveolar fricative",
+        "examples": ["sat", "sit", "sap"],
+        "description": "a voiceless alveolar fricative",
+        "ipa": "s"
       },
-      "K": {
-        "sound": "/k/",
-        "examples": ["cat", "kit", "knot"],
-        "description": "voiceless velar stop",
-        "ipa": "k"
+      "z": {
+        "sound": "representation": "voiced alveolar fricative",
+        "examples": ["zap", "zip", "zoo"],
+        "description": "a voiced alveolar fricative",
+        "ipa": "z"
       }
     },
     "Nasals": {
-      "M": {
-        "sound": "/m/",
+      "m": {
+        "sound": "representation": "voiceless bilabial nasal",
         "examples": ["mat", "met", "mom"],
-        "description": "voiced bilabial nasal",
+        "description": "a voiceless bilabial nasal",
         "ipa": "m"
       },
-      "N": {
-        "sound": "/n/",
-        "examples": ["nat", "net", "nut"],
-        "description": "voiced alveolar nasal",
+      "n": {
+        "sound": "representation": "voiceless alveolar nasal",
+        "examples": ["nat", "net", "nod"],
+        "description": "a voiceless alveolar nasal",
         "ipa": "n"
       }
-    }
-  },
-  "Vowels": {
-    "Monophthongs": {
-      "A": {
-        "sound": "/æ/",
-        "examples": ["cat", "hat", "mat"],
-        "description": "open front unrounded vowel",
-        "ipa": "æ"
+    },
+    "Liquids": {
+      "l": {
+        "sound": "representation": "voiceless alveolar liquid",
+        "examples": ["lap", "lot", "lop"],
+        "description": "a voiceless alveolar liquid",
+        "ipa": "l"
       },
-      "E": {
-        "sound": "/ɛ/",
-        "examples": ["bet", "set", "pet"],
-        "description": "open mid front unrounded vowel",
-        "ipa": "ɛ"
+      "r": {
+        "sound": "representation": "voiced alveolar liquid",
+        "examples": ["rap", "rot", "rop"],
+        "description": "a voiced alveolar liquid",
+        "ipa": "r"
       }
-    }
-  },
-  "Diphthongs": {
-    "AI": {
-      "sound": "/aɪ/",
-      "examples": ["buy", "fly", "try"],
-      "description": "diphthong /aɪ/ with a glide",
-      "ipa": "aɪ"
-    }
-  },
-  "Consonant Blends": {
-    "SP": {
-      "sound": "/sp/",
-      "examples": ["spat", "spot", "spell"],
-      "description": "voiceless alveolar stop + voiceless bilabial fricative",
-      "ipa": "sp"
+    },
+    "Consonant Blends": {
+      "sp": {
+        "sound": "representation": "combination of /s/ and /p/",
+        "examples": ["spin", "spot", "spite"],
+        "description": "a combination of /s/ and /p/",
+        "ipa": "sp"
+      },
+      "tr": {
+        "sound": "representation": "combination of /t/ and /r/",
+        "examples": ["trap", "trip", "tray"],
+        "description": "a combination of /t/ and /r/",
+        "ipa": "tr"
+      }
     }
   }
 }
+```
